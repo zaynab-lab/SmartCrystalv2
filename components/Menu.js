@@ -20,9 +20,7 @@ export default function Menu({ setMenu, menu, name, setName }) {
             <div
               key={i}
               className={
-                page.name === name
-                  ? page.name + " active"
-                  : page.name + " pageName"
+                page.name === name ? page.name + " active" : "pageName"
               }
               onClick={() => {
                 setMenu(false);
@@ -70,6 +68,7 @@ export default function Menu({ setMenu, menu, name, setName }) {
         }
         .pageName{
           padding:.2rem 1rem;
+          cursor:pointer;
         }
         }
       `}</style>
