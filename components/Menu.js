@@ -1,4 +1,5 @@
 import { styles } from "../public/js/styles";
+import X from "../public/img/X";
 
 const pageLists = [
   { title: "Home", name: "" },
@@ -13,7 +14,7 @@ export default function Menu({ setMenu, menu, name, setName }) {
       <div className={menu && "black"} onClick={() => setMenu(false)}></div>
       <div className={`menuContainer ${menu && "showMenu"}`}>
         <div className="X" onClick={() => setMenu(false)}>
-          <img width="20rem" alt="x" src="/img/X.svg" />
+          <X />
         </div>
         <div className="menuContent">
           {pageLists.map((page, i) => (
@@ -59,7 +60,9 @@ export default function Menu({ setMenu, menu, name, setName }) {
           border-left:2px solid ${styles.primaryColor};
         }
         .X{
+          width:3rem;
           padding:0rem .8rem;
+          padding-top:.6rem;
           cursor: pointer;
         }
         .menuContent{

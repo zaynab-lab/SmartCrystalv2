@@ -1,3 +1,5 @@
+import Hamburger from "../public/img/Hamburger";
+import Logo from "../public/img/Logo";
 import { styles } from "../public/js/styles";
 
 export default function TopBar({ setMenu }) {
@@ -5,10 +7,10 @@ export default function TopBar({ setMenu }) {
     <>
       <div className="topBar">
         <div className="Logo">
-          <img width="70%" alt="Logo" src="/img/Logo.svg" />
+          <Logo />
         </div>
         <div className="menuBar" onClick={() => setMenu(true)}>
-          <img width="30rem" alt="|||" src="/img/Hamburger.svg" />
+          <Hamburger />
         </div>
       </div>
       <style jsx>{`
@@ -25,9 +27,12 @@ export default function TopBar({ setMenu }) {
         }
         .menuBar {
           padding: 0.3rem;
+          width: 2.5rem;
           cursor: pointer;
         }
         .Logo {
+          width: 70%;
+          max-width: 11.5rem;
         }
       `}</style>
     </>

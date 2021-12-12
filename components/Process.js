@@ -7,7 +7,7 @@ import { styles } from "../public/js/styles";
 const process = [
   { name: "Talk about solutions", logo: <Meeting /> },
   { name: "Make a Deal", logo: <Deal /> },
-  { name: "Build your assets", logo: <Build /> },
+  { name: "Building your assets", logo: <Build /> },
   { name: "Delivering with Happiness", logo: <Deliver /> }
 ];
 

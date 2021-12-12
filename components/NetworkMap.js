@@ -3,7 +3,7 @@ export default function NetworkMap() {
     <>
       <div className="networkContainer">
         <div className="networkContainer">
-          <div>fjjf</div>
+          <div>dskajfoj</div>
         </div>
       </div>
       <style jsx>{`
