@@ -1,5 +1,4 @@
 import { styles } from "../public/js/styles";
-import Button from "./Button";
 import Three from "./Three";
 
 export default function Introduction() {
@@ -24,6 +23,7 @@ export default function Introduction() {
           border-bottom: 1px solid lightgray;
           padding-bottom: 2rem;
           background: #f6f6f6;
+          overflow: hidden;
         }
         .textTitle {
           padding: 6rem 3rem;
