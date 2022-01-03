@@ -11,7 +11,11 @@ export default function Button() {
           color: white;
           border-radius: 0.6rem;
           display: inline;
-          padding: 0.3rem 1rem;
+          padding: 0.6rem 1rem;
+          cursor: pointer;
+        }
+        .btn:hover {
+          background: #219cd1;
         }
       `}</style>
     </>

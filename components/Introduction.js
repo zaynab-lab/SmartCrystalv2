@@ -1,4 +1,6 @@
+import { styles } from "../public/js/styles";
 import Button from "./Button";
+import Three from "./Three";
 
 export default function Introduction() {
   return (
@@ -6,47 +8,36 @@ export default function Introduction() {
       <div className="introductionContainer">
         <div className="introContentContainer">
           <div className="textTitle">
-            <div className="title">
-              You Need to build or refactor your technology assets ?
-            </div>
-            <div className="titleDescription">
+            <div className="title">We build you the best digital assets</div>
+            {/* <div className="titleDescription">
               we are here to build you the best newest trending technology
-            </div>
+            </div> */}
           </div>
-          <div className="btnContainer">
-            <Button />
+          <div>
+            <Three />
           </div>
         </div>
       </div>
       <style jsx>{`
         .introductionContainer {
           width: 100vw;
-          height: 100vh;
-          background: #03131a;
-          background-image: url("/img/Image.png");
-          background-size: cover;
-          background-position: right;
-          background-loading: eager;
-        }
-        .introContentContainer {
-          padding-left: 6vw;
+          border-bottom: 1px solid lightgray;
+          padding-bottom: 2rem;
+          background: #f6f6f6;
         }
         .textTitle {
-          max-width: 24rem;
-          padding-right: 4vw;
-          padding-top: 30vh;
+          padding: 6rem 3rem;
+          padding-bottom: 3rem;
         }
         .title {
-          color: white;
-          font-size: calc(1.6rem + 1vw);
+          text-align: center;
+          color: ${styles.primaryColor};
+          font-size: clamp(2.4rem, 1rem + 1vw, 5rem);
         }
         .titleDescription {
           color: white;
           font-size: calc(0.8rem + 1vw);
           padding-top: 4vh;
-        }
-        .btnContainer {
-          padding-top: 6vh;
         }
       `}</style>
     </>

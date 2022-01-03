@@ -24,6 +24,7 @@ export default function TopBar({ setMenu }) {
           border-bottom: 2px solid ${styles.primaryColor};
           ${styles.flexAligncenter};
           ${styles.justifyBetween};
+          z-index: 10;
         }
         .menuBar {
           padding: 0.3rem;
