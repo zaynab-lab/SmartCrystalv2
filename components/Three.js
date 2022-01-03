@@ -2,9 +2,11 @@ import { CgMenu } from "react-icons/cg";
 import { IoIosIceCream } from "react-icons/io";
 import { GiCrystalGrowth } from "react-icons/gi";
 import { MdIceSkating, MdOndemandVideo } from "react-icons/md";
-import { BiHomeCircle, BiMessage } from "react-icons/bi";
+import { BiHomeCircle, BiMessageRounded } from "react-icons/bi";
 import { styles } from "../public/js/styles";
 import Button from "./Button";
+import { services } from "./Services";
+import Link from "next/link";
 
 const statuses = [
   { name: "ice cream", icon: <IoIosIceCream /> },
@@ -23,12 +25,12 @@ export default function Three() {
       <div className="app">
         <div className="topBar">
           <div>LOGO</div>
-          <div>
-            <BiMessage />
+          <div className="send">
+            <BiMessageRounded />
           </div>
         </div>
         <div className="statusBar">
-          {statuses.map((status, i) => (
+          {services?.map((status, i) => (
             <div key={i} className="statusContainer">
               <div className="statusCircle">{status.icon}</div>
               <div>{status.name}</div>
@@ -37,7 +39,9 @@ export default function Three() {
         </div>
         <div className="appBody">
           <div className="btnContainer">
-            <Button />
+            <Link href="https://t.me/SmartCrystal">
+              <Button />
+            </Link>
           </div>
         </div>
         <div className="menuBar">
@@ -87,8 +91,8 @@ export default function Three() {
           transform: translateX(3rem) translateZ(3rem);
         }
         .statusBar {
-          ${styles.flexAligncenter}
-          gap:min(3vw, .6rem);
+          display: flex;
+          gap: min(3vw, 0.6rem);
           padding: 1rem 2rem;
           border: 2px solid gray;
           overflow: auto;
@@ -103,6 +107,7 @@ export default function Three() {
           border-radius: 1rem;
           gap: min(3vw, 0.6rem);
           color: ${styles.primaryColor};
+          text-align: center;
         }
         .statusBar:hover > .statusContainer div {
           padding: 0rem 1rem;
@@ -116,7 +121,7 @@ export default function Three() {
           border-radius: 50%;
           ${styles.flexBothcenter}
           overflow:hidden;
-          padding: 0.2rem;
+          padding: 1rem;
         }
 
         .appBody {
@@ -155,12 +160,14 @@ export default function Three() {
           color: white;
           ${styles.flexBothcenter}
         }
-
         .menuItem:hover {
           height: 100%;
           color: ${styles.primaryColor};
           background: white;
           border-radius: 0rem 0rem 1rem 1rem;
+        }
+        .send {
+          font-size: 1.4rem;
         }
       `}</style>
     </>

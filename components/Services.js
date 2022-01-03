@@ -7,14 +7,16 @@ import {
   FaUniversity
 } from "react-icons/fa";
 import { BiNetworkChart } from "react-icons/bi";
+import { GiMonoWheelRobot } from "react-icons/gi";
 
-const services = [
-  { name: "Web development", logo: <FaCode /> },
-  { name: "Native apps", logo: <FaMobile /> },
-  { name: "Dapps", logo: <BiNetworkChart /> },
-  { name: "Graphic Design", logo: <FaDrawPolygon /> },
-  { name: "Photography", logo: <FaCamera /> },
-  { name: "Content Writing", logo: <FaUniversity /> }
+export const services = [
+  { name: "Web development", icon: <FaCode /> },
+  { name: "Native apps", icon: <FaMobile /> },
+  { name: "Dapps", icon: <BiNetworkChart /> },
+  { name: "Machine Learning", icon: <GiMonoWheelRobot /> },
+  { name: "Graphic Design", icon: <FaDrawPolygon /> },
+  { name: "Photography", icon: <FaCamera /> },
+  { name: "Content Writing", icon: <FaUniversity /> }
 ];
 
 export default function Services() {
